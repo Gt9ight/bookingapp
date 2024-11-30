@@ -1,0 +1,153 @@
+/* General Styles */
+.booking-container {
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    perspective: 1500px; /* Add perspective for the 3D effect */
+  }
+  
+  /* Calendar Styles */
+  .calendar-container {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+  
+  .calendar-container h2 {
+    text-align: center;
+  }
+  
+  /* 3D Zoom Effect on Calendar */
+  .zoomed .calendar-container {
+    transform: scale3d(0.3, 0.3, 1) translateZ(-500px);
+    opacity: 0;
+  }
+  
+  /* Zoomed View */
+  .zoomed-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transform: scale3d(1, 1, 1);
+    transition: transform 0.8s ease-in-out;
+    transform-origin: center center; /* Center the zoom */
+  }
+  
+  .zoomed-view h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  /* Times Display */
+  .times-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+  
+  .zoomed-view .times-container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .times-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .time-button {
+    background-color: lightgray;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .time-button:hover {
+    background-color: #ccc;
+  }
+  
+  .time-button.selected {
+    background-color: green;
+    color: white;
+  }
+  
+  .confirm-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .confirm-button:hover {
+    background-color: darkblue;
+  }
+  
+  /* Form Container */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .form-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-container button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-container button:hover {
+    background-color: darkgreen;
+  }
+  
+  /* Confirmation Message */
+  .confirmation-message {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .confirmation-message h3 {
+    font-size: 2rem;
+  }
+  
+  .confirmation-message p {
+    font-size: 1.2rem;
+  }
+  
+  /* Back Button */
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: darkred;
+  }
+  
